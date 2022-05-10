@@ -1,0 +1,52 @@
+/* Custom arrow */
+.alice-carousel__prev-btn [data-area]::after {
+  content: url("../../assets/left.png");
+  
+  
+}
+
+/* Custom arrow */
+.alice-carousel__next-btn [data-area]::after {
+  content: url("../../assets/right.png");
+}
+
+.alice-carousel__next-btn {
+  position: relative;
+  left: 600px;
+  bottom: 230px;
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.alice-carousel__prev-btn {
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+  text-align: start;
+  position: relative;
+  right: 26px;
+  bottom: 230px;
+}
+
+.alice-carousel__stage-item {
+  margin-right:7px ;
+}
+
+
+
+.alice-carousel__prev-btn-item{
+  cursor: pointer;
+  padding: 8px 12px 0 12px;
+}
+
+.alice-carousel__next-btn-item {
+  cursor: pointer;
+  padding: 10px 14px 0 14px;
+}
