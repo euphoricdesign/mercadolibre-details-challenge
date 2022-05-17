@@ -19,21 +19,23 @@ export default function ShortDescription({product = mock.product}) {
     <Stack 
       style={{"border": "1px solid rgba(0,0,0,.1)", "padding": "24px 16px"}}
       borderRadius="8px"
+      height="676px"
+      marginBottom="16px"
     >
       <Stack className="sales" color="rgba(0,0,0,.55)" direction="row" divider={<StackDivider borderColor="rgba(0,0,0,.2)" height="13px" style={{"marginTop":"5px"}} />} fontSize="sm">
         <Text>Nuevo</Text>
         <Text>49 vendidos</Text>
       </Stack>
       <Stack className="title" direction="row" alignItems="flex-start" spacing={0}>
-        <Text maxWidth="300px" width="300px" fontSize="22px" fontWeight="bold">{product.title}</Text>
-        <Icon color="#3483fa" fontSize="21px" as={BsHeart} style={{"marginTop":"6px"}} />
+        <Text maxWidth="300px" width="300px" fontSize="22px" lineHeight="1.18" fontWeight="bold">{product.title}</Text>
+        <Icon color="#3483fa" fontSize="21px" as={BsHeart} />
       </Stack>
       <Opinions />
       <Price />
-      <Link style={{"marginTop":"2px"}} fontSize="15px" color="#3483fa">Ver los medios de pago</Link>
+      <Link style={{"marginTop":"1px"}} fontSize="14px" color="#3483fa">Ver los medios de pago</Link>
       <ShippingDetails text1="Llega gratis mañana" text2="Ver más formas de entrega" icon={HiOutlineTruck}/>
-      <ShippingDetails text1="Tenés 30 días desde que lo recibís." text2="Conocer más" icon={BsArrowReturnLeft}/>
-      <Text fontSize="18px" fontWeight={600}>¡Última disponible!</Text>
+      <ShippingDetails text1="Devolución gratis" text2="Conocer más" text3="Tenés 30 días desde que lo recibís." icon={BsArrowReturnLeft}/>
+      <Text fontSize="18px" fontWeight={600} marginTop="20px">¡Última disponible!</Text>
       <Buttons />
       <ShortDescriptionLastText link='Compra protegida' text=', recibí el producto que esperabas o te devolvemos tu dinero.' icon={BiCheckShield}/>
       <ShortDescriptionLastText link='Mercado puntos.' text=' Sumás 163 puntos.' icon={AiOutlineTrophy}/>

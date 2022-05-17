@@ -1,0 +1,36 @@
+.thermometer {
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  margin-left: -6px;
+  overflow: hidden;
+  width: 100%;
+  appearance: none;
+}
+
+.thermometer-item {
+  border-left: 6px solid #fff;
+  box-sizing: border-box;
+  float: left;
+  height: 8px;
+  margin-top: 2px;
+  width: 20%;
+}
+
+.one{
+  background: #fff0f0;
+}
+.two {
+  background: #fff5e8;
+}
+.three {
+  background: #fffcda;
+}
+.four {
+  background: #f1fdd7;
+}
+.five {
+  background: #39b54a;
+  height: 12px;
+  margin: 0;
+}

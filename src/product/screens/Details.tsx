@@ -13,6 +13,12 @@ import {AiOutlineTrophy} from "react-icons/ai";
 import ShortDescription from "../../app/components/ShortDescription";
 import SliderGallery from "../../app/components/SliderGallery";
 import SellerPosts from "../../app/components/SellerPosts";
+import SellerDescription from "../../app/components/SellerDescription";
+import Publi from "../../app/components/Publi";
+import MainFeatures from "../../app/components/MainFeatures";
+import InfoAndPubli from "../../app/components/InfoAndPubli";
+import Description from "../../app/components/Description";
+import QuestionAndAnswer from "../../app/components/QuestionAndAnswer";
 
 interface Props {
   product: Product;
@@ -34,7 +40,7 @@ const DetailsScreen: React.FC<Props> = ({product = mock.product}) => {
 
           <Stack direction="row" marginBottom="12px" divider={<StackDivider borderColor="rgba(0,0,0,.2)" height="13px" style={{"marginTop":"5px"}} />}>
             <Link color="#333" _hover= {{color: "#000"}} fontSize="14px">Volver al listado</Link>
-            <Link fontSize="15px" color="#3483fa">Juegos y Juguetes</Link>
+            <Link fontSize="14px" color="#3483fa">Juegos y Juguetes</Link>
           </Stack>
 
           <Stack direction="row-reverse" spacing={2} backgroundColor="#fff" borderRadius={4} boxShadow="md" marginBottom={4} minWidth="800px" paddingBottom="30px">
@@ -48,15 +54,22 @@ const DetailsScreen: React.FC<Props> = ({product = mock.product}) => {
               
             >
               <ShortDescription />
-              <ShortDescription />
+              <SellerDescription />
+              <Publi />
+              <InfoAndPubli />
             </Stack>
             <Stack>
               <Stack divider={<StackDivider style={{"marginLeft":"50px", "marginBottom":"0"}} borderColor="#e5e5e5" />}>
                 <SliderGallery />
-                <Text paddingTop="40px" marginLeft="50px" color="#333" fontSize="24px">Publicaciones del vendedor</Text>
+                <Text marginBottom="24px" paddingTop="40px" marginLeft="50px" color="#333" fontSize="24px">Publicaciones del vendedor</Text>
               </Stack>
               <SellerPosts />
-              <Link style={{"marginLeft":"50px"}} fontSize="15px" color="#3483fa">Ver más publicaciones del vendedor</Link>
+              <Stack divider={<StackDivider style={{"marginLeft":"50px", "marginBottom":"0"}} borderColor="#e5e5e5" />}>
+                <Link style={{"marginLeft":"50px", "marginBottom":"28px"}} fontSize="14px" color="#3483fa">Ver más publicaciones del vendedor</Link>
+                <MainFeatures />
+                <Description />
+              </Stack>
+              <QuestionAndAnswer />
             </Stack>
           </Stack>
         </Container>
