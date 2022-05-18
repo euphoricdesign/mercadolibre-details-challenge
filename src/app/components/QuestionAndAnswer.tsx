@@ -1,25 +1,33 @@
+import React, {useState, useRef, useEffect} from 'react'
 import { Stack, Text, Button, Input, FormControl, Image } from '@chakra-ui/react'
-import React, {useState, useRef} from 'react'
 import useRandomDates from '../../hook/useRandomDates'
 
 import borde from '../../assets/borde.png'
 
 export default function QuestionAndAnswer() {
-  const [postQuestions, setPostQuestions] =useState([])
-  const [questions, setQuestions] =useState(false)
+  const [postQuestions, setPostQuestions] = useState([]);
+  const [questions, setQuestions] = useState(false);
 
-  const input = useRef()
+  const input = useRef();
 
-  const handleEvent = () => {
-    setQuestions(true)
-    setPostQuestions([...postQuestions, input.current.value])
-    input.current.value = ""
+  useEffect(() => {
+    const localPostQuestions = localStorage.getItem("questions");
+
+    if (localPostQuestions) {
+      setPostQuestions(JSON.parse(localPostQuestions))
+      setQuestions(true)
+    }
+  }, [localStorage.getItem("questions")])
+
+  const handleSendPostQuestion = () => {
+    const updatedPostQuestions = [...postQuestions, input.current.value];
+    setPostQuestions(updatedPostQuestions);
+    localStorage.setItem("questions", JSON.stringify(updatedPostQuestions));
+    input.current.value = "";
+    setQuestions(true);
   }
 
-  const handleBlur = (e) => {
-    const value = e.target.value
-    localStorage.setItem(value,value)
-  }
+  console.log("postQuestions::::::::::::::::::", postQuestions)
 
   return (
     <Stack style={{"marginLeft":"50px","paddingTop":"40px","marginTop":"0"}}>
@@ -74,9 +82,9 @@ export default function QuestionAndAnswer() {
       <Text style={{"marginTop":"40px"}} fontSize="18px" fontWeight="600">Preguntale al vendedor</Text>
       <Stack direction="row" style={{"marginTop":"16px"}}>
         <FormControl>
-          <Input onBlur={handleBlur} ref={input} width="550px" padding=".8125em .75em" lineHeight="1" minHeight="48px" placeholder='Escribe tu pregunta...' />
+          <Input ref={input} width="550px" padding=".8125em .75em" lineHeight="1" minHeight="48px" placeholder='Escribe tu pregunta...' />
           <Button
-            onClick={handleEvent}
+            onClick={handleSendPostQuestion}
             backgroundColor="#3483fa" 
             color="#fff"
             _hover={{
@@ -99,8 +107,8 @@ export default function QuestionAndAnswer() {
             <>
               <Text fontSize="18px" fontWeight="600" color="rgba(0,0,0,.9)">Últimas realizadas</Text>
               {postQuestions.map(q => (
-                <Stack>
-                  <Text style={{"marginTop":"24px"}} color="rgba(0,0,0,.9)" fontSize="16px">{localStorage.getItem(q)}</Text>
+                <Stack key={q}>
+                  <Text style={{"marginTop":"24px"}} color="rgba(0,0,0,.9)" fontSize="16px">{q}</Text>
                   <Stack direction="row" spacing={1}>
                     <Image height="20px" src={borde} />
                     <Text fontSize="16px" color="rgba(0,0,0,.55)" style={{"position":"relative","top":"2px"}}>Si tenemos. {useRandomDates()}</Text>

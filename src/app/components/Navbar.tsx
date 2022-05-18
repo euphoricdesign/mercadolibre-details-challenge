@@ -2,9 +2,6 @@ import React from "react";
 
 import {Container, Stack, Box, Image, Text, Input, Icon, StackDivider, Link} from "@chakra-ui/react";
 import {AiOutlineSearch} from "react-icons/ai";
-import {HiOutlinePrinter} from "react-icons/hi";
-import {TiLocationOutline} from "react-icons/ti";
-import {GiShoppingCart} from "react-icons/gi";
 import './Navbar.css'
 
 import logo from "../../assets/logo.png";
