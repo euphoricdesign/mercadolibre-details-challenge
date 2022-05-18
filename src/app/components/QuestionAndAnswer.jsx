@@ -107,7 +107,7 @@ export default function QuestionAndAnswer() {
             <>
               <Text fontSize="18px" fontWeight="600" color="rgba(0,0,0,.9)">Últimas realizadas</Text>
               {postQuestions.map(q => (
-                <Stack key={q}>
+                <Stack key={Math.random()}>
                   <Text style={{"marginTop":"24px"}} color="rgba(0,0,0,.9)" fontSize="16px">{q}</Text>
                   <Stack direction="row" spacing={1}>
                     <Image height="20px" src={borde} />

@@ -1,5 +1,6 @@
-import { Image, Stack } from '@chakra-ui/react'
 import React, { useRef } from 'react'
+import { Image, Stack } from '@chakra-ui/react'
+import './SliderGallery.css'
 
 
 
@@ -15,55 +16,17 @@ export default function SliderGallery() {
         "border":"2px solid #fff"
       }}>
         <Stack direction="row">
-          <ul style={{
-            "listStyle":"none",
-            "margin":"0",
-            "textAlign":"center",
-            "display":"flex",
-            "flexDirection":"column"
-          }}>
-            <li style={{
-              "margin":"0px 0px 15px",
-              "display":"inline-block",
-              "width":"50px",
-              "height":"50px",
-              "border":"1px solid rgba(0,0,0,.25)",
-              "cursor":"pointer",
-              "borderRadius":"6px",
-            }}>
+          <ul className='galleryList'>
+            <li className='galleryItem'>
               <Image padding="2px" display="block" width="100%" height="100%" objectFit="contain" onClick={handleEvent} src='http://http2.mlstatic.com/D_978173-MLA32582347639_102019-O.jpg' />
             </li>
-            <li style={{
-              "margin":"0px 0px 15px",
-              "display":"inline-block",
-              "width":"50px",
-              "height":"50px",
-              "border":"1px solid rgba(0,0,0,.25)",
-              "cursor":"pointer",
-              "borderRadius":"6px"
-            }}>
+            <li className='galleryItem'>
               <Image padding="2px" display="block" width="100%" height="100%" objectFit="contain" onClick={handleEvent} src='http://http2.mlstatic.com/D_918230-MLA31424182281_072019-O.jpg' />
             </li>
-            <li style={{
-              "margin":"0px 0px 15px",
-              "display":"inline-block",
-              "width":"50px",
-              "height":"50px",
-              "border":"1px solid rgba(0,0,0,.25)",
-              "cursor":"pointer",
-              "borderRadius":"6px"
-            }}>
+            <li className='galleryItem'>
               <Image padding="2px" display="block" width="100%" height="100%" objectFit="contain" onClick={handleEvent} src='http://http2.mlstatic.com/D_616691-MLA27900381255_082018-O.jpg' />
             </li>
-            <li style={{
-              "margin":"0px 0px 15px",
-              "display":"inline-block",
-              "width":"50px",
-              "height":"50px",
-              "border":"1px solid rgba(0,0,0,.25)",
-              "cursor":"pointer",
-              "borderRadius":"6px"
-            }}>
+            <li className='galleryItem'>
               <Image padding="2px" display="block" width="100%" height="100%" objectFit="contain" onClick={handleEvent} src='http://http2.mlstatic.com/D_754004-MLA32299823528_092019-O.jpg' />
             </li>
           </ul>

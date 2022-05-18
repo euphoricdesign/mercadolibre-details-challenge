@@ -7,7 +7,7 @@ import './Navbar.css'
 import logo from "../../assets/logo.png";
 import disneyPubli from "../../assets/disney-publi.jpg";
 import cart from "../../assets/cart.png";
-import IconSvg from "./Icon";
+import location from "../../assets/location.png"
 
 
 export default function Navbar() {
@@ -42,7 +42,7 @@ export default function Navbar() {
             <Stack alignItems="baseline" direction="row" justifyContent="space-between">
               <Stack alignItems="baseline" direction="row" spacing="61px">
                 <Stack alignItems="center" direction="row" spacing={1}>
-                  <IconSvg width="23px"/>
+                  <Image width="21px" src={location} />
                   <Stack spacing={0}>
                     <Text style={{"position":"relative","top":"4px"}} color="rgba(0,0,0,.55)" fontSize="12px" lineHeight="normal">
                       Enviar a

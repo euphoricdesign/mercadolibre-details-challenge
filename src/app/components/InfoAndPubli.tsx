@@ -4,13 +4,8 @@ import {
   Text,
   Stack, 
   StackDivider, 
-  Button, 
   Image,
-  Link,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
+  Link
 } from "@chakra-ui/react";
 
 import mercadocredito from '../../assets/mercadocredito.jpg'

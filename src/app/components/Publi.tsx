@@ -3,14 +3,8 @@ import React from 'react'
 import {
   Text,
   Stack, 
-  StackDivider, 
   Button, 
-  Image,
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
+  Image
 } from "@chakra-ui/react";
 
 import publi from '../../assets/publi.jpg'
