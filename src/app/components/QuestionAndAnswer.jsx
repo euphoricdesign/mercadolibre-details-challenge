@@ -27,8 +27,6 @@ export default function QuestionAndAnswer() {
     setQuestions(true);
   }
 
-  console.log("postQuestions::::::::::::::::::", postQuestions)
-
   return (
     <Stack style={{"marginLeft":"50px","paddingTop":"40px","marginTop":"0"}}>
       <Text fontSize="25px">Preguntas y respuestas</Text>
