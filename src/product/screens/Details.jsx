@@ -1,15 +1,6 @@
 import React from "react";
 
-import {Product} from "../types";
-import mock from "../mock";
-
 import {Text, Stack, Box, Container, StackDivider, Icon, Link, Button } from "@chakra-ui/react";
-import {AiFillStar} from "react-icons/ai";
-import {BsHeart} from "react-icons/bs";
-import {HiOutlineTruck} from "react-icons/hi";
-import {BsArrowReturnLeft} from "react-icons/bs";
-import {BiCheckShield} from "react-icons/bi";
-import {AiOutlineTrophy} from "react-icons/ai";
 import ShortDescription from "../../app/components/ShortDescription";
 import SliderGallery from "../../app/components/SliderGallery";
 import SellerPosts from "../../app/components/SellerPosts";
@@ -20,11 +11,9 @@ import InfoAndPubli from "../../app/components/InfoAndPubli";
 import Description from "../../app/components/Description";
 import QuestionAndAnswer from "../../app/components/QuestionAndAnswer";
 
-interface Props {
-  product: Product;
-}
 
-const DetailsScreen: React.FC<Props> = ({product = mock.product}) => {
+
+const DetailsScreen = () => {
   return (
     <div>
       <Box>
