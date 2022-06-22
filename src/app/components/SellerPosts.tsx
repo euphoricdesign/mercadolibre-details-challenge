@@ -47,7 +47,7 @@ const items = [
 
     <Box style={{"padding":"16px 12px 16px 16px","borderTop":"1px solid rgba(51,51,51,.1)"}}>
       <Text color="#333" fontSize="22px">$4.899</Text>
-      <Text color="#00a650" fontSize="14px" fontWeight="500" lineHeight="1em" marginBottom="9px">Envío gratis</Text>
+      {/* <Text color="#00a650" fontSize="14px" fontWeight="500" lineHeight="1em" marginBottom="9px">Envío gratis</Text> */}
       <Text color="rgba(0,0,0,.8)" fontSize="14px">Peluche Lapras 20 Cm Pokemon Pikachu</Text>
     </Box>
   </Box>,
@@ -56,7 +56,7 @@ const items = [
 
     <Box style={{"padding":"16px 12px 16px 16px","borderTop":"1px solid rgba(51,51,51,.1)"}}>
       <Text color="#333" fontSize="22px">$4.899</Text>
-      <Text color="#00a650" fontSize="14px" fontWeight="500" lineHeight="1em" marginBottom="9px">Envío gratis</Text>
+      {/* <Text color="#00a650" fontSize="14px" fontWeight="500" lineHeight="1em" marginBottom="9px">Envío gratis</Text> */}
       <Text color="rgba(0,0,0,.8)" fontSize="14px">Peluche Lapras 20 Cm Pokemon Pikachu</Text>
     </Box>
   </Box>,

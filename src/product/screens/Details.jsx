@@ -1,6 +1,7 @@
 import React from "react";
 
 import {Text, Stack, Box, Container, StackDivider, Icon, Link, Button } from "@chakra-ui/react";
+
 import ShortDescription from "../../app/components/ShortDescription";
 import SliderGallery from "../../app/components/SliderGallery";
 import SellerPosts from "../../app/components/SellerPosts";

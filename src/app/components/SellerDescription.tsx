@@ -26,7 +26,7 @@ export default function SellerDescription() {
       <Text color="rgba(0,0,0,.9)" fontSize="18px" marginBottom="28px">Información sobre el vendedor</Text>
 
       <Stack style={{"marginTop":"0", "marginBottom":"20px"}} direction="row" spacing={3}>
-        <Image position="relative" top="2px" width="15px" height="20px" src={location} />
+        <Image position="relative" top="2px" width="24px" height="27px" src={location} />
         <Stack spacing={0}>
           <Text color="rgba(0,0,0,.9)" fontSize="16px" fontWeight="400">Ubicación</Text>
           <Text color="rgba(0,0,0,.55)" fontSize="14px">Villa Pueyrredón, Capital Federal</Text>
